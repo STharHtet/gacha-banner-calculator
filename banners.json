@@ -1,0 +1,92 @@
+{
+  "Honkai-Star-Rail": [
+    {
+      "endDate": "2025-03-07",
+      "name": "Banner 1",
+      "featuredCharacter": "Seele",
+      "startDate": "2025-03-01"
+    },
+    {
+      "endDate": "2025-03-14",
+      "name": "Banner 2",
+      "featuredCharacter": "Himeko",
+      "startDate": "2025-03-08"
+    },
+    {
+      "endDate": "2025-03-21",
+      "name": "Banner 3",
+      "featuredCharacter": "Kafka",
+      "startDate": "2025-03-15"
+    }
+  ],
+  "Genshin-Impact": [
+    {
+      "endDate": "2025-03-07",
+      "name": "Banner 1",
+      "featuredCharacter": "Ganyu",
+      "startDate": "2025-03-01"
+    },
+    {
+      "endDate": "2025-03-14",
+      "name": "Banner 2",
+      "featuredCharacter": "Raiden",
+      "startDate": "2025-03-08"
+    },
+    {
+      "endDate": "2025-03-21",
+      "name": "Banner 3",
+      "featuredCharacter": "Xiao",
+      "startDate": "2025-03-15"
+    },
+    {
+      "endDate": "2025-05-10",
+      "name": "Special Event",
+      "featuredCharacter": "Diluc",
+      "startDate": "2025-05-01"
+    },
+    {
+      "endDate": "2025-02-20",
+      "name": "Test banner",
+      "featuredCharacter": "Mavuika",
+      "startDate": "2025-02-18"
+    },
+    {
+      "endDate": "2025-07-07",
+      "name": "Banner 1",
+      "featuredCharacter": "Ganyu (Rerun)",
+      "startDate": "2025-07-01"
+    },
+    {
+      "endDate": "2025-02-20",
+      "name": "Test banner 2",
+      "featuredCharacter": "Test",
+      "startDate": "2025-02-17"
+    },
+    {
+      "endDate": "2025-08-10",
+      "name": "Anniversary Banner",
+      "featuredCharacter": "Furina",
+      "startDate": "2025-08-01"
+    }
+  ],
+  "Wuthering-Waves": [
+    {
+      "endDate": "2025-03-07",
+      "name": "Banner 1",
+      "featuredCharacter": "Carlotta",
+      "startDate": "2025-03-01"
+    },
+    {
+      "endDate": "2025-03-14",
+      "name": "Banner 2",
+      "featuredCharacter": "Jinhsi",
+      "startDate": "2025-03-08"
+    },
+    {
+      "endDate": "2025-03-21",
+      "name": "Banner 3",
+      "featuredCharacter": "Changli",
+      "startDate": "2025-03-15"
+    }
+  ]
+}
