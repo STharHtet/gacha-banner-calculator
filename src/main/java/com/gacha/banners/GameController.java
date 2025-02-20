@@ -11,6 +11,7 @@ import java.util.*;
 
 //@CrossOrigin(origins = "http://localhost:5173") // allow frontend to access backend; remember this setting
 //@CrossOrigin(origins = "https://gacha-banner-calculator.netlify.app")  // allow Netlify frontend
+@CrossOrigin(origins = { "https://gacha-banner-calculator.netlify.app", "http://localhost:5173" })
 @RestController
 @RequestMapping("/games")
 public class GameController {

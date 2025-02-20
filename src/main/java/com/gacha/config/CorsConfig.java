@@ -43,7 +43,7 @@ public class CorsConfig implements Filter {
         HttpServletResponse response = (HttpServletResponse) res;
         HttpServletRequest request = (HttpServletRequest) req;
 
-        response.setHeader("Access-Control-Allow-Origin", "https://gacha-banner-calculator.netlify.app");  // Allow frontend
+        response.setHeader("Access-Control-Allow-Origin", "*");  // Allow frontend
         response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
         response.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type, Accept");
         response.setHeader("Access-Control-Allow-Credentials", "true");
