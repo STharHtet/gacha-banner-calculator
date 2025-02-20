@@ -9,7 +9,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.*;
 
-@CrossOrigin(origins = {"http://localhost:5173", "https://sparkly-hummingbird-770fb0.netlify.app/"}) // allow frontend to access backend; remember this setting
+@CrossOrigin(origins = {"http://localhost:5173", "https://gacha-banner-calculator.netlify.app/"}) // allow frontend to access backend; remember this setting
 @RestController
 @RequestMapping("/games")
 public class GameController {
