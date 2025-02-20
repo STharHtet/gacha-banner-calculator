@@ -1,0 +1,5 @@
+# Created at 2025-02-20T19:15:42.071
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Sanera\Tasks\gacha-calculator\full-stack\Github repo\banners\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
