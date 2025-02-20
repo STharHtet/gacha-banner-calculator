@@ -1,0 +1,9 @@
+# target/
+# *.jar
+# *.log
+# *.md
+# Dockerfile
+# .dockerignore
+# .idea/
+# .vscode/
+# node_modules/

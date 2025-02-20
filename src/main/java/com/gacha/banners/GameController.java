@@ -9,12 +9,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.*;
 
-@CrossOrigin(origins = "http://localhost:5173") // allow frontend to access backend
+@CrossOrigin(origins = "http://localhost:5173") // allow frontend to access backend; remember this setting
 @RestController
 @RequestMapping("/games")
 public class GameController {
     private static final List<Game> games = new ArrayList<>();
-    private static final String BANNERS_JSON_PATH = "banners.json"; // use the JSON outside to save local and for persistence 
+    // private static final String BANNERS_JSON_PATH = "banners.json"; // use the JSON outside to save local and for persistence. Uncomment here if you are not using docker
 
     // Load games from JSON when the application starts
     static {
@@ -56,23 +56,41 @@ public class GameController {
         return PullCalculator.calculate(game.getBanners(), player, game.getPityRate());
     }
 
-    // Load banners from banners.json
-    private static void loadBannersFromJson() {
-        JSONParser parser = new JSONParser();
-        try {
-            FileReader reader = new FileReader(BANNERS_JSON_PATH);
-            JSONObject bannersJson = (JSONObject) parser.parse(reader);
+    // Load banners from banners.json (This is for local testing)
+    // private static void loadBannersFromJson() {
+    //     JSONParser parser = new JSONParser();
+    //     try {
+    //         FileReader reader = new FileReader(BANNERS_JSON_PATH);
+    //         JSONObject bannersJson = (JSONObject) parser.parse(reader);
 
-            // Add games with banners loaded from JSON
-            games.add(new Game("Genshin-Impact", 160, 90, parseBanners(bannersJson, "Genshin-Impact")));
-            games.add(new Game("Wuthering-Waves", 160, 80, parseBanners(bannersJson, "Wuthering-Waves")));
-            games.add(new Game("Honkai-Star-Rail", 160, 90, parseBanners(bannersJson, "Honkai-Star-Rail")));
+    //         // Add games with banners loaded from JSON
+    //         games.add(new Game("Genshin-Impact", 160, 90, parseBanners(bannersJson, "Genshin-Impact")));
+    //         games.add(new Game("Wuthering-Waves", 160, 80, parseBanners(bannersJson, "Wuthering-Waves")));
+    //         games.add(new Game("Honkai-Star-Rail", 160, 90, parseBanners(bannersJson, "Honkai-Star-Rail")));
 
-            reader.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    //         reader.close();
+    //     } catch (Exception e) {
+    //         e.printStackTrace();
+    //     }
+    // }
+
+    // Load banners.json for docker
+    private static final String BANNERS_JSON_PATH = "/app/banners.json";
+
+private static void loadBannersFromJson() {
+    JSONParser parser = new JSONParser();
+    try (FileReader reader = new FileReader(BANNERS_JSON_PATH)) {
+        JSONObject bannersJson = (JSONObject) parser.parse(reader);
+        
+        // Load banners from JSON
+        games.add(new Game("Genshin-Impact", 160, 90, parseBanners(bannersJson, "Genshin-Impact")));
+        games.add(new Game("Wuthering-Waves", 160, 80, parseBanners(bannersJson, "Wuthering-Waves")));
+        games.add(new Game("Honkai-Star-Rail", 160, 90, parseBanners(bannersJson, "Honkai-Star-Rail")));
+        
+    } catch (Exception e) {
+        e.printStackTrace();
     }
+}
 
     // Save banners to banners.json when a new banner is added
     private static void saveBannersToJson() {

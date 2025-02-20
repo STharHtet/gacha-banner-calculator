@@ -1,5 +1,5 @@
 HELP.md
-target/
+# target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -32,16 +32,16 @@ build/
 ### VS Code ###
 .vscode/
 
-# Ignore build artifacts
-target/
-build/
-*.jar
-*.war
+# # Ignore build artifacts
+# target/
+# build/
+# #*.jar
+# *.war
 
-# Ignore IDE files
-.idea/
-*.iml
+# # Ignore IDE files
+# .idea/
+# *.iml
 
-# Ignore local configuration files
-*.properties
-*.env
+# # Ignore local configuration files
+# *.properties
+# *.env
