@@ -10,7 +10,7 @@
 //     @Bean
 //     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 //         http
-//             // .csrf(csrf -> csrf.disable()) // Disable CSRF for testing
+//             .csrf(csrf -> csrf.disable()) // Disable CSRF for testing
 //             .cors(cors -> cors.disable()) // Spring Security might override CORS settings
 //             .authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
 //         return http.build();
